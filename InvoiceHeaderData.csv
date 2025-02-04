@@ -1,0 +1,4 @@
+﻿InvoiceNumber;CompanyName;ReferenceNumber;InvoiceDate;DueDate;CompanyCode;BankAccountNumber;AmountExclVAT;VATAmount;TotalAmount
+143143;;;15.12.2022;;1234567-8;;1350;0;0
+;;;;;1234567-9;;0;0;0
+153143;;;15.12.2022;;1234567-8;;2700;0;0
