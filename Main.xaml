@@ -91,7 +91,7 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1279.2,3943" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1279.2,4265" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="index">
         <sap:WorkflowViewStateService.ViewState>
@@ -107,7 +107,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="626,3920" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="626,4242" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_HeaderResult" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_RowResult" />
@@ -128,13 +128,13 @@
           <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("SourceData","*.pdf")]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[index]" DisplayName="For Each pdfText" sap:VirtualizedContainerService.HintSize="592,3259" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[files]">
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[index]" DisplayName="For Each pdfText" sap:VirtualizedContainerService.HintSize="592,3596" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[files]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="pdfText" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="590,3129" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="590,3466" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="companyCode" />
               </Sequence.Variables>
@@ -158,8 +158,8 @@
                 </Assign.Value>
               </Assign>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="556,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;CompanyCode: .&quot; + companyCode + &quot;.&quot;]" />
-              <ui:Comment sap:VirtualizedContainerService.HintSize="556,103" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Otsikkotason parsinta" />
-              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[companyCode]" sap:VirtualizedContainerService.HintSize="556,2218" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <ui:Comment sap:VirtualizedContainerService.HintSize="556,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Otsikkotason parsinta" />
+              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[companyCode]" sap:VirtualizedContainerService.HintSize="556,2570" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                 <Switch.Default>
                   <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="554,25" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
@@ -321,17 +321,17 @@
                         </Sequence>
                       </ui:CommentOut.Body>
                     </ui:CommentOut>
-                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {&#xD;&#xA;&#x9;invoiceNumber, companyName, referenceNumber, invoiceDate, dueDate, companyCode, bankAccountNumber,&#xD;&#xA;&#x9;Convert.ToDouble(amountExclVAT.Replace(&quot;,&quot;, &quot;.&quot;).Replace(&quot; &quot;, &quot;&quot;)),&#xD;&#xA;&#x9;Convert.ToDouble(vatAmount.Replace(&quot;,&quot;, &quot;.&quot;).Replace(&quot; &quot;, &quot;&quot;)),&#xD;&#xA;&#x9;Convert.ToDouble(totalAmount.Replace(&quot;,&quot;, &quot;.&quot;).Replace(&quot; &quot;, &quot;&quot;))&#xD;&#xA;}]" DataTable="[dt_HeaderResult]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="486,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {&#xA;&#x9;invoiceNumber, companyName, referenceNumber, invoiceDate, dueDate, companyCode, bankAccountNumber,&#xA;&#x9;Convert.ToDouble(amountExclVAT.Replace(&quot;,&quot;, &quot;.&quot;).Replace(&quot; &quot;, &quot;&quot;)),&#xA;&#x9;Convert.ToDouble(vatAmount.Replace(&quot;,&quot;, &quot;.&quot;).Replace(&quot; &quot;, &quot;&quot;)),&#xA;&#x9;Convert.ToDouble(totalAmount.Replace(&quot;,&quot;, &quot;.&quot;).Replace(&quot; &quot;, &quot;&quot;))&#xA;}]" DataTable="[dt_HeaderResult]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="486,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                   </Sequence>
                 </Sequence>
-                <Sequence x:Key="1234567-9" DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,352" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence x:Key="1234567-9" DisplayName="Body" sap:VirtualizedContainerService.HintSize="554,352" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap:VirtualizedContainerService.HintSize="450,292" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence sap:VirtualizedContainerService.HintSize="520,292" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -345,7 +345,7 @@
           </ActivityAction>
         </ui:ForEach.Body>
       </ui:ForEach>
-      <ui:Comment sap:VirtualizedContainerService.HintSize="592,103" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Kirjoitetaan CSV" />
+      <ui:Comment sap:VirtualizedContainerService.HintSize="592,88" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Kirjoitetaan CSV" />
       <ui:WriteCsvFile AddHeaders="True" DataTable="[dt_HeaderResult]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="InvoiceHeaderData.csv" sap:VirtualizedContainerService.HintSize="592,177" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
     </Sequence>
   </Sequence>
